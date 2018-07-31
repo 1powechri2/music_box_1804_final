@@ -15,9 +15,9 @@ describe 'Admnin visits genre index' do
 
     fill_in :genre_name, with: 'Grind Core'
 
-    click_on("Create Genre" )
+    click_on("Create Genre")
 
-    expect(current_path).to be(genres_path)
+    expect(current_path).to eq(genres_path)
     expect(page).to have_content('Grind Core')
   end
 end
