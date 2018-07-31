@@ -17,7 +17,7 @@ describe 'a user visits a genre show page' do
     genre_song_2 = GenreSong.create(song_id: song_2.id, genre_id: genre_1.id)
     genre_song_3 = GenreSong.create(song_id: song_3.id, genre_id: genre_2.id)
 
-    visit genre_path(genre)
+    visit genre_path(genre_1)
 
     expect(page).to have_content(genre.name)
     expect(page).to have_content(song_1.name)
