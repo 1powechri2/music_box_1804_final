@@ -19,9 +19,9 @@ describe 'a user visits a genre show page' do
 
     visit genre_path(genre_1)
 
-    expect(page).to have_content(genre.name)
-    expect(page).to have_content(song_1.name)
-    expect(page).to have_content(song_2.name)
-    expect(page).to_not have_content(song_3.name)
+    expect(page).to have_content(genre_1.name)
+    expect(page).to have_content(song_1.title)
+    expect(page).to have_content(song_2.title)
+    expect(page).to_not have_content(song_3.title)
   end
 end
