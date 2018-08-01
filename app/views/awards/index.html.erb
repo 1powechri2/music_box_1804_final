@@ -1,3 +1,7 @@
 <% @awards.each do |award| %>
 <%= link_to award.name, award_path(award) %>
 <% end %>
+
+<% if current_user && current_user.admin? %>
+<%= link_to "Create a New Award", new_award_path %>
+<% end %>
