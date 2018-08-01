@@ -4,6 +4,9 @@ class Song < ApplicationRecord
   has_many :playlist_songs
   has_many :playlists, through: :playlist_songs
 
+  has_many :award_years
+  has_many :awards, through: :award_years
+
   before_save :generate_slug
 
 

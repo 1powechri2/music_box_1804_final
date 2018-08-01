@@ -9,5 +9,7 @@ describe Song, type: :model do
 
   describe 'relationships' do
     it{should belong_to(:artist)}
+    it{should have_many(:award_years)}
+    it{should have_many(:awards).through(:award_years)}
   end
 end
