@@ -6,6 +6,7 @@ class AwardsController < ApplicationController
 
   def show
     @award = Award.find(params[:id])
+    @songs  = @award.songs
   end
 
   def create

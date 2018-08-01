@@ -5,7 +5,7 @@
   <p>Plays: <%=song.play_count%></p>
   <p>Awards for this Song: </p>
     <% song.awards.each do |award| %>
-    <%= award.name %> <%= award.find_award_year %>
+    <%= award.name %> <%= award.find_award_year(song.id) %>
     <% end %>
   <p><%= button_to 'Add Song', carts_path(song_id: song.id), class: 'btn btn-danger' %></p>
 <%end%>

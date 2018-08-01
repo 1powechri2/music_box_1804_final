@@ -16,7 +16,7 @@ describe Award, type: :model do
       song_award_1 = AwardYear.create(year: 1990, award_id: award_1.id, song_id: song_1.id)
       song_award_2 = AwardYear.create(year: 1991, award_id: award_2.id, song_id: song_1.id)
 
-      expect(award_1.find_award_year).to eq(song_award_1.year)
+      expect(award_1.find_award_year(song_1.id)).to eq(song_award_1.year)
     end
   end
 end
