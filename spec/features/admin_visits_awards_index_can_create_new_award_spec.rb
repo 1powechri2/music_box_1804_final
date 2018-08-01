@@ -35,7 +35,6 @@ describe 'unregistered user visits award index' do
   it 'cannot see create a new award link' do
     award_1 = Award.create(name: "iuyper")
     award_2 = Award.create(name: "kjhfdg")
-    award_3 = Award.create(name: "kjhfgsfdg")
 
     visit awards_path
 
